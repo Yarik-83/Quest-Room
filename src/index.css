@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+
+body {
+  @apply m-auto w-[1366px] font-[Raleway] relative h-[786px]
+}
