@@ -1,7 +1,7 @@
+import {IIconsProps} from '../../interface'
 
 
-
-export default function IconPerson({color,className}) {
+export default function IconPerson({color,className}:IIconsProps):React.JSX.Element {
 
     return (
         <svg className={className} width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">

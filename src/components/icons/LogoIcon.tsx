@@ -1,7 +1,7 @@
-
-export default function LogoIcon({style,color}) {
+import {IIconsProps} from '../../interface'
+export default function LogoIcon({className,color}:IIconsProps):React.JSX.Element {
    return(
-    <svg className={style} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M36.7542 2.52L39.48 5.2458V36.7584L36.7542 39.4842H5.2458L2.52 36.7584V5.2458L5.2458 2.52H36.7584M37.8042 0H4.2L0 4.2V37.8C1.6422 39.4422 2.5578 40.3578 4.2 42H37.8L42 37.8V4.2C40.3578 2.5578 39.4422 1.6422 37.8 0H37.8042Z" fill={color}/>
 <path d="M17.3502 28.2701L13.0326 23.9483L26.5482 9.99169L32.5668 8.73169L31.3068 14.7503L17.3502 28.2701Z" fill={color}/>

@@ -1,16 +1,17 @@
 
 
-import Layout from './pages/LayoutPage';
+import Layout from './pages/LayoutPage.jsx';
 import { BrowserRouter, Routes, Route, } from "react-router";
 import MainPage from './pages/MainPage';
-import NotFoundPage from './pages/NoteFoundPage';
-import OneGamePage from './pages/OneGamePage';
-import ContactsPage from './pages/ContactsPage';
+import NotFoundPage from './pages/NoteFoundPage.jsx';
+import OneGamePage from './pages/OneGamePage.jsx';
+import ContactsPage from './pages/ContactsPage.jsx';
 import {useStore} from './store' 
 
-function App() {
 
-const{questsOfGenre}=useStore()
+function App(): React.ReactElement {
+
+const{questsOfGenre} = useStore()
 
   return (
     <>

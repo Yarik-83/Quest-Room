@@ -2,10 +2,14 @@
 import MyMap from '../components/MyMap';
 
 
-export default function ContactsPage() {
+export default function ContactsPage(): React.JSX.Element {
 
+    interface ICotactsProps {
+        firstText: string,
+        secondText: string
+    }
 
-function ContactDetails({ firstText, secondText }) {
+function ContactDetails({ firstText, secondText }:ICotactsProps): React.JSX.Element {
     return (
         <div className=" flex flex-col gap-2.5 ">
             <p className="text-[#E5E5E5] text-base font-bold ">{firstText}</p>

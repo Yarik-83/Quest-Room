@@ -3,21 +3,18 @@
 import { GoogleMap, useJsApiLoader,Marker } from '@react-google-maps/api'
 
 
-
-
-const containerStyle = {
+const containerStyle: React.CSSProperties  = {
   width: '649px',
   height: '299px',
   borderRadius: '16px',
-  
 }
 
-const center = {
+const center: {lat:number;lng:number} = {
   lat: 49.8415229,
   lng: 24.0303204,
 }
 
-export default function MyMap() {
+export default function MyMap():React.ReactNode {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',

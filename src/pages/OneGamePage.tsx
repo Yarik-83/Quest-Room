@@ -5,22 +5,36 @@ import IconPuzzle from '../components/icons/IconPuzzle';
 import IconDivider from '../components/icons/IconDivider';
 import ClockIcon from '../components/icons/ClockIcon';
 import { useStore } from '../store';
+import {IArrQuests} from '../interface'
 
 
 
 
-export default function OneGamePage({ arr }) {
+export default function OneGamePage({ arr }:IArrQuests): React.ReactElement | null {
 
-
-    const styleIcon = ' mr-2 ';
+ 
+        interface IId {
+            id: string 
+        }
+ 
+    const styleIcon: string = ' mr-2 ';
 
     const { setPopupShow } = useStore()
-    const { id } = useParams();
+    const { id }= useParams<{id: string}>();
+
+    if (!id) return null;
+    
     const quest = arr.filter((el) => el.id === +id)[0]
 
     const openPopup = () => setPopupShow(true)
 
-    function InfoItem({ children, text }) {
+
+        interface IInfoItemProps {
+            children: React.ReactNode,
+            text: string
+        }
+
+    function InfoItem({ children, text }:IInfoItemProps):React.ReactElement {
 
         return (
             <div className=" flex text-[#fec432] ">
@@ -29,6 +43,8 @@ export default function OneGamePage({ arr }) {
             </div>
         )
     }
+
+    if(!quest) return null
 
     return (
         <main className=" relative h-[768px] " style={{ backgroundImage: `url(${quest.picture})`, backgroundSize: 'cover' }}>

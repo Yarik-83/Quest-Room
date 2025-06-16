@@ -1,13 +1,14 @@
 
-import SetOfButtons from '../components/SetOfButtons';
+import * as React from 'react';
+import SetOfButtons from '../components/SetOfButtons.jsx';
 import WrapCards from '../components/WrapCards';
 import {useStore} from '../store';
 
-export default function MainPage() {
+export default function MainPage(): React.ReactElement {
 
-const listButtons = ['Всі Ігри','Пригодне','Страшне','Містичне','Детективне','Sci-Fi']
+const listButtons: string[] = ['Всі Ігри','Пригодне','Страшне','Містичне','Детективне','Sci-Fi']
 
-const{questsOfGenre,}=useStore()
+const{questsOfGenre,} = useStore()
 
     return(
         <div className=" mx-33.25 pt-30.5 h-[768px] ">

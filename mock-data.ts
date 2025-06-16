@@ -1,3 +1,5 @@
+
+import {IQuest} from "./src/interface"
 import img1 from "./src/assets/bg/bg1.jpg";
 import img2 from "./src/assets/bg/bg2.png";
 import img3 from "./src/assets/bg/bg3.png";
@@ -6,7 +8,8 @@ import img5 from "./src/assets/bg/bg5.jpg";
 import img6 from "./src/assets/bg/bg6.jpg";
 import img7 from "./src/assets/bg/bg7.jpg";
 
-export const quests = [
+
+export const quests: Array<IQuest> = [
   {
     id: 1,
     title: "ПАЦЮЧА ПАСТКА",

@@ -1,16 +1,18 @@
-
+import {IQuest} from "../interface"
 import { Link } from 'react-router-dom'
 import IconPerson from './icons/IconPerson';
 import IconPuzzle from './icons/IconPuzzle';
 import IconDivider from './icons/IconDivider';
 
+interface ICard{
+    card: IQuest
+}
+
+export default function Card({ card }: ICard): React.JSX.Element { 
 
 
-export default function Card({ card }) {
-
-
-    const dividerStyle = 'ml-3 mr-3'
-    const iconStyle = 'mr-2 '
+    const dividerStyle: string = 'ml-3 mr-3'
+    const iconStyle: string = 'mr-2 '
 
     return (
         <Link to={`detailed-quest/${card.id}`} className=' relativ rounded-2xl relative'

@@ -2,7 +2,18 @@
 import { NavLink } from "react-router-dom";
 import LogoIcon from './icons/LogoIcon';
 
-const navLinks = [
+interface INavLink {
+  id: number,
+  link: string,
+  to: string
+}
+
+interface INavList {
+  arr: INavLink[]
+}
+
+
+const navLinks: INavLink[] = [
   { id: 1, link: "Ігри", to: "/" },
   { id: 2, link: "Новачкам", to: "beginners" },
   { id: 3, link: "Відгуки", to: "reviews" },
@@ -11,12 +22,13 @@ const navLinks = [
 ];
 
 
+
 export default function Header() {
 
-  function NavList({ arr }) {
+  function NavList({ arr }: INavList) {
 
-     const styleActive = ' no-underline text-[#fec432] '
-     const style = ''
+     const styleActive: string = ' no-underline text-[#fec432] '
+     const style: string = ''
 
     return (
       <nav>

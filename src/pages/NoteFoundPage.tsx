@@ -1,6 +1,6 @@
 
 
-export default function NoteFoundPage() {
+export default function NoteFoundPage(): React.ReactElement {
 
 
     return (

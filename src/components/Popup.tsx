@@ -1,12 +1,12 @@
 
 import CloseIcon from './icons/CloseIcon';
-import MyButton from './MyButton';
+import MyButton from './MyButton.jsx';
 import { useStore } from '../store';
 import Checkbox from './Checkbox';
 
 
 
-export default function Popup() {
+export default function Popup(): React.JSX.Element{
 
   const { setPopupShow, } = useStore()
 
@@ -14,7 +14,7 @@ export default function Popup() {
   const closePopup = () => { setPopupShow(false) }
 
 
-  const inputStyle = ' text-white bg-[#535353] border-none text-sm w-100 h-14 rounded-m mb-8 pl-6 placeholder:text-[#A6A6A6] appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none '
+  const inputStyle: string = ' text-white bg-[#535353] border-none text-sm w-100 h-14 rounded-m mb-8 pl-6 placeholder:text-[#A6A6A6] appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none '
 
 
   return (
