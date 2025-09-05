@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function UserCabinet() {
 
-  const { userId,setUserId } = useStore()
+  const { userId, setUserId } = useStore()
   const [isShowHist, setIsShowHist] = useState(false)
   const [btnText, setBtnText] = useState('Історія замовлень')
   const navigate = useNavigate()
@@ -30,7 +30,7 @@ export default function UserCabinet() {
   const getOut = () => {
     setUserId(null)
     Cookies.remove('token')
-        navigate("/")
+    navigate("/")
   }
 
   const URL = `${BASE_URL}/user`;
@@ -58,9 +58,9 @@ export default function UserCabinet() {
   const { data, isLoading, error } = useQuery({
     queryKey: ['user', userId],
     queryFn: fetchUsers,
-    retry: 1,
-    staleTime: 0,
-    gcTime: 0,
+    retry: 3,
+    staleTime: 24*60*60*1000,
+    gcTime: 24*60*60*1000,
   });
 
   if (isLoading) return <MySpiner />

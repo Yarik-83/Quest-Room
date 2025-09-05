@@ -39,6 +39,7 @@ export interface IStor {
   questId: null | number;
   minPlayers: number | null;
   maxPlayers: number | null;
+  userPhone: string;
 
   setAllQuests: (arr: IQuest[]) => void;
   setListQuests: (arr: string[]) => void;
@@ -50,6 +51,7 @@ export interface IStor {
   setPopLoginOpt: (flag: boolean) => void;
   setFetchErrMessage: (text: string | null) => void;
   setBtnActive: (value: number) => void;
+  setUserPhone: (value: string) => void;
   setGenre: (id: string) => void;
   setIsLoading: (flag: boolean) => void;
   setUserId: (val: null | number) => void;

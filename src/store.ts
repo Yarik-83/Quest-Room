@@ -20,6 +20,7 @@ export const useStore = create<IStor>((set, get) => ({
   questId: null,
   minPlayers: null,
   maxPlayers: null,
+  userPhone: "",
 
 
   setAllQuests: (arr) => set({ allQuests: arr, questsOfGenre: arr }),
@@ -30,6 +31,7 @@ export const useStore = create<IStor>((set, get) => ({
   setSignUpByPhone: (flag) => set({ signUpByPhone: flag }),
   setSignInByPhone: (flag) => set({ signInByPhone: flag }),
   setPopLoginOpt: (flag) => set({ popLoginOptions: flag }),
+  setUserPhone: (num) => set({ userPhone: num }),
   setFetchErrMessage: (text) => set({ fetchErrMessage: text }),
   setBtnActive: (index) => set({ btnIsActive: index }),
   setIsLoading: (flag) => set({ isLoading: flag }),

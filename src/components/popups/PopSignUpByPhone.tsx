@@ -76,7 +76,6 @@ export default function SignUpByPhone(): React.ReactElement {
 
   useEffect(() => {
     if (mutation.isPending) {
-      console.log('pending>>>UpByPhone');
       setIsLoading(mutation.isPending);
     }
   }, [mutation.isPending])
