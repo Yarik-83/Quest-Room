@@ -1,6 +1,7 @@
 
 import { NavLink } from "react-router-dom";
 import LogoIcon from './icons/LogoIcon';
+import BtnEnterAccaunt from "./icons/IconsEnterAccount";
 
 interface INavLink {
   id: number,
@@ -23,12 +24,12 @@ const navLinks: INavLink[] = [
 
 
 
-export default function Header() {
+export default function Header(): React.ReactElement {
 
   function NavList({ arr }: INavList) {
 
-     const styleActive: string = ' no-underline text-[#fec432] '
-     const style: string = ''
+    const styleActive: string = ' no-underline text-[#fec432] '
+    const style: string = ''
 
     return (
       <nav>
@@ -36,8 +37,8 @@ export default function Header() {
           {arr.map((el) => (
             <li key={el.id}>
               <NavLink
-                 className={({ isActive }) => isActive ? styleActive : style} to={el.to}
-                 >
+                className={({ isActive }) => isActive ? styleActive : style} to={el.to}
+              >
                 {el.link}
               </NavLink>
             </li>
@@ -53,7 +54,11 @@ export default function Header() {
     <div className=' h-[74px] flex justify-between items-center px-8 absolute w-full z-10 '>
       < LogoIcon color="#A6A6A6" />
       <NavList arr={navLinks} />
-      <p className='text-[#A6A6A6]' >+38 (050) 555-99-55</p>
+      <div className="flex gap-4">
+        <BtnEnterAccaunt />
+        <p className='text-[#A6A6A6]' >+38 (050) 555-99-55</p>
+      </div>
+
     </div>
   );
 }

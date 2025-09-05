@@ -1,8 +1,12 @@
-import {IClassName} from '../interface.ts'
+
+
+ interface ICheckboxProps {
+    className: string
+}
 
 
 
-export default function Checkbox({ className}: IClassName): React.JSX.Element {
+export default function Checkbox({ className}:ICheckboxProps): React.JSX.Element {
 
     return (
         <input type="checkbox" className={className}  name='checkbox' />

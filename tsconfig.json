@@ -4,8 +4,11 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "jsx": "react-jsx",
-    "strict": true
+    "strict": true,
+      "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["src", "tailwind.config.js", "postcss.config.cjs"],
+  
 }
 

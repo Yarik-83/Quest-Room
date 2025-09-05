@@ -2,7 +2,7 @@ import {IBtnProps} from '../interface'
 
 
 
-export default function MyButton(props:IBtnProps) {
+export default function MyButton(props:IBtnProps): React.ReactElement{
    const {className,text,click}= props; 
 
    return (

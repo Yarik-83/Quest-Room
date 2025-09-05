@@ -14,7 +14,7 @@ const center: {lat:number;lng:number} = {
   lng: 24.0303204,
 }
 
-export default function MyMap():React.ReactNode {
+export default function MyMap():React.ReactElement {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',

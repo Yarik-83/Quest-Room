@@ -2,10 +2,10 @@ import { useStore } from "../store";
 
 
 interface ISetBtnProps {
-  arr: string[]
+  arr: Array<string>
 }
 
-export default function SetOfButtons({ arr }:ISetBtnProps): React.ReactNode{
+export default function SetOfButtons({ arr }:ISetBtnProps): React.ReactElement{
   const { setGenre, setBtnActive, btnIsActive } = useStore();
 
   const styleBtn : string =
@@ -16,8 +16,8 @@ export default function SetOfButtons({ arr }:ISetBtnProps): React.ReactNode{
 
   
   function handleClick(e: React.MouseEvent<HTMLButtonElement>, index: number) {
-    const btnId = e.currentTarget.id;
-    setGenre(btnId);
+   
+    setGenre(e.currentTarget.id);
     setBtnActive(index);
   }
 

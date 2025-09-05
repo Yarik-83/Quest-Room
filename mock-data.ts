@@ -9,6 +9,13 @@ import img6 from "./src/assets/bg/bg6.jpg";
 import img7 from "./src/assets/bg/bg7.jpg";
 
 
+
+
+
+
+console.log("Hello, world!");
+
+
 export const quests: Array<IQuest> = [
   {
     id: 1,
@@ -87,3 +94,8 @@ export const quests: Array<IQuest> = [
     picture: img7,
   },
 ];
+
+
+
+
+console.log(JSON.stringify(quests, null, 2));
